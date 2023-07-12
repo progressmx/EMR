@@ -1,8 +1,5 @@
 import React from 'react'
-import { Carousel, Typography, Button} from '@material-tailwind/react'
-import image_1 from '../images/1.jpg'
-import image_2 from '../images/2.jpg'
-import image_3 from '../images/3.jpg'
+import { Carousel, Typography, Button} from '@material-tailwind/react'
 
 export default function Slider(){
   return (
