@@ -51,7 +51,7 @@ export default function Features() {
             </span>
 
         </div>
-        <div className='grid mx-auto px-10 gap-6 lg:grid-cols-2'>
+        <div className='grid mx-auto px-2 gap-6 lg:grid-cols-2'>
             {
                 features.map((feature)=>(
                     <div className='flex m-4'>
