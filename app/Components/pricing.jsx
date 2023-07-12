@@ -1,10 +1,33 @@
 import React from 'react'
-import { Typography , Button} from '@material-tailwind/react'
-function Pricing(props) {
+import {
+    Card,
+    CardHeader,
+    CardBody,
+    CardFooter,
+    Typography,
+    Button,
+  } from "@material-tailwind/react";
+import { CheckIcon } from "@heroicons/react/24/outline";
 
+const pricing = [
+    {
+        name: "Basic", 
+        price:"10"
+    },
+    {
+        name: "Standard", 
+        price:"20"
+    },
+    {
+        name: "Premium", 
+        price:"30"
+    }
+]
+
+function Pricing() {
   return (
-    <div id='pricing' className='relative grid gap-16 h-full p-8 grid-cols-1 grid-rows-auto'>
-        <div className='text-white min-h-[100px] flex flex-col gap-6 w-full justify-center place-items-center text-center'>
+    <div id='pricing' className='grid grid-rows-auto min-h-[100vh]  p-4'>
+        <div className='text-white m-6 mx-auto text-center mb-8'>
             <Typography  variant="h1" color="White" className="text-bold text-3xl">
                 Pricing plans for teams of all sizes
             </Typography>
@@ -14,118 +37,84 @@ function Pricing(props) {
             </span>
 
         </div>
-        <div className='grid gap-6 text-white m-auto lg:grid-cols-3'>
-            <div className='flex flex-col border-[1px] border-gray-700 rounded-[30px] min-h-[70vh] md:min-h-[50vh] w-[50vh]  lg:min-h-[90vh] p-8 hover:w-70 cursor-pointe'>
-                <span className='text-bold text-blue-700 text-[18px] lg:text-[18px] md:text-3xl'>
-                    Basic Plan
-                </span>
-                <p className='mt-4 md:text-[18px]'>The essentials to provide your best work for clients</p>
-                <p className=' flex mt-4 mb-6 place-items-baseline'>
-                    <span className='text-bold text-5xl mr-2'>$ 10 /</span><span>month</span>
-                </p>
-                <p className='text-bold text-blue-700 mt-6 md:text-[20px] lg:text-sm '>What's Included</p>
-                <ul role="list" className='mt-6 mb-8 grid grid-cols-1 gap-4 text-sm leading-6 md:text-[20px] lg:text-sm'>
-                    <li className='flex gap-x-3'> 
-                        <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                        </svg>
-                        Member resources
-                    </li>
-                    <li className='flex gap-x-3'> 
-                        <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                        </svg>
-                        Member resources
-                    </li>
-                    <li className='flex gap-x-3'> 
-                        <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                        </svg>
-                        Member resources
-                    </li>
-                    <li className='flex gap-x-3'> 
-                        <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                        </svg>
-                        Member resources
-                    </li>
-                </ul>
-                <button className='rounded w-full h-10 m-auto lg:h-10 bg-blue-700 md:h-20'>Start now</button>
-            </div> 
-            <div className='flex flex-col border-[1px] border-gray-700 rounded-[30px] min-h-[70vh] md:min-h-[50vh] w-[50vh]  lg:min-h-[90vh] p-8 hover:w-70 cursor-pointe'>
-                <span className='text-bold text-blue-700 text-[18px] lg:text-[18px] md:text-3xl'>
-                    Compact Plan
-                </span>
-                <p className='mt-4 md:text-[18px]'>The essentials to provide your best work for clients</p>
-                <p className=' flex mt-4 mb-6 place-items-baseline'>
-                    <span className='text-bold text-5xl mr-2'>$ 20 /</span><span>month</span>
-                </p>
-                <p className='text-bold text-blue-700 mt-6 md:text-[20px] lg:text-sm '>What's Included</p>
-                <ul role="list" className='mt-6 mb-8 grid grid-cols-1 gap-4 text-sm leading-6 md:text-[20px] lg:text-sm'>
-                    <li className='flex gap-x-3'> 
-                        <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                        </svg>
-                        Member resources
-                    </li>
-                    <li className='flex gap-x-3'> 
-                        <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                        </svg>
-                        Member resources
-                    </li>
-                    <li className='flex gap-x-3'> 
-                        <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                        </svg>
-                        Member resources
-                    </li>
-                    <li className='flex gap-x-3'> 
-                        <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                        </svg>
-                        Member resources
-                    </li>
-                </ul>
-                <button className='rounded w-full h-10 m-auto lg:h-10 bg-blue-700 md:h-20'>Start now</button>
-            </div> 
-            <div className='flex flex-col border-[1px] border-gray-700 rounded-[30px] min-h-[70vh] md:min-h-[50vh] w-[50vh]  lg:min-h-[90vh] p-8 hover:w-70 cursor-pointe'>
-                <span className='text-bold text-blue-700 text-[18px] lg:text-[18px] md:text-3xl'>
-                    Premium Plan
-                </span>
-                <p className='mt-4 md:text-[18px]'>The essentials to provide your best work for clients</p>
-                <p className=' flex mt-4 mb-6 place-items-baseline'>
-                    <span className='text-bold text-5xl mr-2'>$ 30 /</span><span>month</span>
-                </p>
-                <p className='text-bold text-blue-700 mt-6 md:text-[20px] lg:text-sm '>What's Included</p>
-                <ul role="list" className='mt-6 mb-8 grid grid-cols-1 gap-4 text-sm leading-6 md:text-[20px] lg:text-sm'>
-                    <li className='flex gap-x-3'> 
-                        <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                        </svg>
-                        Member resources
-                    </li>
-                    <li className='flex gap-x-3'> 
-                        <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                        </svg>
-                        Member resources
-                    </li>
-                    <li className='flex gap-x-3'> 
-                        <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                        </svg>
-                        Member resources
-                    </li>
-                    <li className='flex gap-x-3'> 
-                        <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                        </svg>
-                        Member resources
-                    </li>
-                </ul>
-                <button className='rounded w-full h-10 m-auto lg:h-10 bg-blue-700 md:h-20'>Start now</button>
-            </div> 
+        <div className='grid grid-cols-1 mx-auto gap-6 md:grid-cols-2 lg:grid-cols-3'>
+
+            {
+                pricing.map((price)=>(
+                    <Card color="blue" variant="gradient" className="w-full max-w-[20rem] p-8">
+                        <CardHeader
+                            floated={false}
+                            shadow={false}
+                            color="transparent"
+                            className="m-0 mb-8 rounded-none border-b border-white/10 pb-8 text-center"
+                        >
+                            <Typography
+                            variant="small"
+                            color="white"
+                            className="font-normal uppercase"
+                            >
+                            {price.name}
+                            </Typography>
+                            <Typography
+                            variant="h1"
+                            color="white"
+                            className="mt-6 flex justify-center gap-1 text-7xl font-normal"
+                            >
+                            <span className="mt-2 text-4xl">$</span>{price.price}{" "}
+                            <span className="self-end text-4xl">/mo</span>
+                            </Typography>
+                        </CardHeader>
+                        <CardBody className="p-0">
+                            <ul className="flex flex-col gap-4">
+                            <li className="flex items-center gap-4">
+                                <span className="rounded-full border border-white/20 bg-white/20 p-1">
+                                <CheckIcon strokeWidth={2} className="h-3 w-3" />
+                                </span>
+                                <Typography className="font-normal">5 team members</Typography>
+                            </li>
+                            <li className="flex items-center gap-4">
+                                <span className="rounded-full border border-white/20 bg-white/20 p-1">
+                                <CheckIcon strokeWidth={2} className="h-3 w-3" />
+                                </span>
+                                <Typography className="font-normal">200+ components</Typography>
+                            </li>
+                            <li className="flex items-center gap-4">
+                                <span className="rounded-full border border-white/20 bg-white/20 p-1">
+                                <CheckIcon strokeWidth={2} className="h-3 w-3" />
+                                </span>
+                                <Typography className="font-normal">40+ built-in pages</Typography>
+                            </li>
+                            <li className="flex items-center gap-4">
+                                <span className="rounded-full border border-white/20 bg-white/20 p-1">
+                                <CheckIcon strokeWidth={2} className="h-3 w-3" />
+                                </span>
+                                <Typography className="font-normal">1 year free updates</Typography>
+                            </li>
+                            <li className="flex items-center gap-4">
+                                <span className="rounded-full border border-white/20 bg-white/20 p-1">
+                                <CheckIcon strokeWidth={2} className="h-3 w-3" />
+                                </span>
+                                <Typography className="font-normal">Life time technical support</Typography>
+                            </li>
+                            </ul>
+                        </CardBody>
+                        <CardFooter className="mt-12 p-0">
+                            <Button
+                            size="lg"
+                            color="white"
+                            className="text-blue-500 hover:scale-[1.02] focus:scale-[1.02] active:scale-100"
+                            ripple={false}
+                            fullWidth={true}
+                            >
+                            Buy Now
+                            </Button>
+                        </CardFooter>
+                    </Card>
+
+                ))
+
+            }
+            
         </div>
        
     </div>
